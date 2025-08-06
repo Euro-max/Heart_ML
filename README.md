@@ -18,18 +18,27 @@ The project utilizes the **Heart Disease UCI** dataset, a well-known benchmark f
 
 ## 📁 Project Structure
 
-Heart_ML/
-├── data/
-│   └── heart_disease_uci.csv   # The raw dataset
-│   └── cleaned_heart_disease_uci.csv #After preprocessing
-├── models/
-│   ├── final_model.pkl         #  final trained model pipeline
-│   ├── scaler.pkl              # Preprocessing scaler object
-│   └── pca.pkl                 # PCA object for dimensionality reduction
-├── app.py                      # The main Streamlit web application script
-├── notebook.ipynb              # Jupyter/Colab notebook for training, analysis, and tuning
-├── README.md                   
-└── requirements.txt            # All project dependencies
+├── data/                    # Contains the raw dataset and the preprocessed data
+│   └── heart_disease_uci.csv
+│   └── cleaned_heart_disease_uci.csv
+├── models/                  # Stores trained model and preprocessors
+│   ├── final_model.pkl
+│   ├── pca.pkl
+│   └── scaler.pkl
+├── ui/                    # Streamlit web application
+│   └── app.py                 
+├── notebooks      # Jupyter/Colab notebooks
+│   └── Data_PreProcessing.ipynb
+│   └── Feature_Selection.ipynb
+│   └── HyperParameter_Tuning.ipynb
+│   └── PCA_Analysis.ipynb
+│   └── Simple_feedforward_NN.ipynb
+│   └── Supervised_Learning.ipynb
+│   └── UnSupervised_Learning.ipynb
+
+├── README.md                # Project documentation
+└── requirements.txt         # Project dependencies
+
 
 ## 🧠 Methodology
 
