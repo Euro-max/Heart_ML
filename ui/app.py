@@ -2,13 +2,22 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+from pathlib import Path
+# --- Load the necessary files ---
+# Get the absolute path to the directory where the app.py script is located
+base_dir = Path(__file__).resolve().parent
+
+# Now, build the path to your model file from this base directory
+# '.. / model / YALA5.pkl' means go up one directory, then into 'model'
+model_path = base_dir.parent / "model" / "YALA5.pkl"
+scaler_path = base_dir.parent / "model" / "scaler.pkl"
+pca_path = base_dir.parent / "model" / "pca.pkl"
 
 # --- Load the necessary files ---
 try:
-    # Adjust filenames if they are different
-    model = joblib.load('../model/YALA5.pkl') 
-    scaler = joblib.load('../model/scaler.pkl')
-    pca = joblib.load('../model/pca.pkl')
+    model = joblib.load(model_path)
+    scaler = joblib.load(scaler_path)
+    pca = joblib.load(pca_path)
 except FileNotFoundError as e:
     st.error(f"Error: The required file '{e.filename}' was not found.")
     st.stop()
