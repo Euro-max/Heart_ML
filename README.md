@@ -16,6 +16,7 @@ This project is a comprehensive machine learning pipeline designed to predict th
 
 The project utilizes the **Heart Disease UCI** dataset, a well-known benchmark for heart disease prediction. The dataset contains 14 features and a multi-class target variable (`num`) indicating the presence and type of heart disease (from 0 to 4).
 
+---
 ## 📁 Project Structure
 
 ├── data/                    # Contains the raw dataset and the preprocessed data
@@ -39,7 +40,7 @@ The project utilizes the **Heart Disease UCI** dataset, a well-known benchmark f
 ├── README.md                # Project documentation
 └── requirements.txt         # Project dependencies
 
-
+---
 ## 🧠 Methodology
 
 ### 1. Data Preprocessing
